@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+/* Elements */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+	font-family: 'Libre Baskerville', serif;
+	line-height: 1.5;
+	font-size: 18px;
+    border: 1px black solid;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+section {
+    margin: 15px 0px;
+}
+
+
+p {
+	margin-top: 1em;
+    padding: 1px;
+}
+
+
+a {
+	color: #3366BB;
+    font-size: .9em;
+}
+
+
+h1 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1em;
+	text-align: center;
+    font-weight: bolder;
+}
+
+h3 {
+	font-size: 18px;
+	text-align: center;
+}
+
+
+ul {
+
+    list-style-image: url("../images/checkmark.png");
+    padding-left: 50px;
+    line-height: .5px;
+}
+
+li {
+    text-align: left;
+
+}
+
+img{
+}
+
+footer {
+	background: #ffffff;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+/* Classes */
+
+.pushpin {
+    transform: rotate(-8deg);
+    margin-top: -5px;
+}
+
+.a {
+    color: #3366BB;
+    padding-left: .65em;
+    margin: .15em;
+}
+
+.li_nav {
+    text-align: center;
+    font-size: .75em;
+    display: inline-block;
+
+}
+
+.imgframe {
+	padding: 5px;
+	margin: 0 auto;
+	border: 2px solid #ffffff;
+}
+
+.circle {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 125px;
+    /* margin: 75px; */
+}
+
+.hero {
+	text-align: center;
+	width: 100%;
+	padding: 10px 10px 15px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #ffffff;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.logo {
+	background-color: #FFFFA5;
+    border: 1px black solid;
+    float: left;
+}
+
+.clearfix:after, section:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix img {
+	display: block;
+
+}
+
+.skills {
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+}
+
+.inner_header_wrapper {
+    max-width: 425px;
+    width: 100%;
+    float: left;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: 6em;
+}
+
+.header_wrapper {
+    max-width: 1500px;
+    margin: auto;
+
+}
+
+.polaroid {
+    background-repeat: no-repeat;
+    transform: rotate(3deg);
+    position: relative;
+    padding: 0 .5em;
+}
+.polaroid_img {
+    width: 100%;
+}
+.circle {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.polaroid div {
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    left: 1em;
+    right: 1em;
+}
+.pageJump {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+
+.two_column {
+    background: url("../images/corkboardwall.jpg");
+    border: 1px black solid;
+    width: 100%;
+}
+
+.threeColumn {
+    background: url("../images/corkboardwall.jpg");
+    border: 1px black solid;
+    width: 100%;
+}
+
+.inner_wrapper {
+    max-width: 475px;
+}
+
+.innerWrapper {
+    max-width: 425px;
+}
+
+.innerWrapperContact {
+    max-width: 500px;
+}
+
+.yellow_post_it {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    float: left;
+    margin: 2% 1.5% 2% 5%;
+    text-align: center;
+    transform: rotate(3deg);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellowPostit {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    float: left;
+    margin: 2% 1.5% 2% 5%;
+    text-align: center;
+    transform: rotate(3deg);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellowPostitContact {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    margin: auto;
+    text-align: center;
+    transform: rotate(3deg);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellow_post_it_twist {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    float: left;
+    margin: 2% 5% 2% 5%;
+    text-align: center;
+    transform: rotate(-3deg);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellowPostitTwist {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    float: left;
+    margin: 2% 1.5% 2% 5%;
+    text-align: center;
+    transform: rotate(-3deg);
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.notecard {
+    background: url("../images/Notecard.jpg");
+    border: 1px black solid;
+    float: left;
+    width: 380px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 9px rgba(0,0,0,.6);
+}
+
+.notecard_twist {
+    background: url("../images/Notecard.jpg");
+    border: 1px black solid;
+    float: left;
+    width: 380px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+    transform: rotate(-3deg);
+    box-shadow: 5px 5px 9px rgba(0,0,0,.6);
+}
+
+/* Media Queries */
+
+/* On screens that are 425px wide or less, remove the floats*/
+@media screen and (max-width: 425px) {
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    border: 1px black solid;
+}
+
+section {
+    margin: 5px 0px;
+}
+
+.two_column {
+    background: url("../images/corkboardwall.jpg");
+    border: 1px black solid;
+    width: 100%;
+}
+    
+.header_wrapper {
+    max-width: 425px;
+    margin: auto;
+
+}
+
+.yellow_post_it {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    margin: 2% 5% 2% 5%;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellow_post_it_twist {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    margin: 2% 5% 2% 5%;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.inner_header_wrapper {
+    max-width: 425px;
+    width: 100%;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+}
+
+.polaroid {
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+    position: relative;
+    padding: 0 .5em;
+}
+
+.polaroid_img {
+    width: 100%;
+}
+
+.page_jump {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+    }
+
+/* On screens that are 425px wide or less, remove the floats*/
+@media screen and (max-width: 1024px) {
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    border: 1px black solid;
+}
+
+section {
+    margin: 10px 0px;
+}
+
+.two_column {
+    background: url("../images/corkboardwall.jpg");
+    border: 1px black solid;
+    width: 100%;
+}
+    
+.header_wrapper {
+    max-width: 425px;
+    margin: auto;
+
+}
+
+.yellow_post_it {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    margin: 2% 2% 2% 2%;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.yellow_post_it_twist {
+    background-color: #FFFFA5;
+    border: 1px black solid;
+    margin: 2% 2% 2% 2%;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+}
+
+.inner_header_wrapper {
+    max-width: 425px;
+    width: 100%;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+}
+
+.polaroid {
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+    position: relative;
+    padding: 0 .5em;
+}
+
+.polaroid_img {
+    width: 100%;
+}
+
+.page_jump {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+    }
