@@ -33,12 +33,18 @@ router.get('/', function(req, res){
             var person = parsed["canonical-vid"];
             var dealURL = 'https://api.hubapi.com/deals/v1/deal/associated/contact/' + person +'/paged?hapikey=' + process.env.apikey +'&includeAssociations=true&limit=10&properties=dealname&properties=first_name'
             https.get(dealURL, function(response) {
-				console.log(response);
-			});
+				var body = '';
+        		response.on('data', function(d) {
+            		body += d;
+        		});
+        		response.on('end', function() {
+					console.log(body);
+				});
             // callback({
             //     email: parsed.email,
             // });
-        });
+        	});
+    	});
     });
 
 	// $.ajax({
