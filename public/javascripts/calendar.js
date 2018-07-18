@@ -52,13 +52,6 @@ $("#teeTime").submit(function(event) {
 
 //get data from HubSpot and display in a pop up modal
 
-$("#teeTime").submit(function(event) {
-	event.preventDefault();
-	$.ajax({
-	  type: "GET",
-	  url: "https://accesscontrolalloworiginall.herokuapp.com/https://api.hubapi.com/contacts/v1/contact/email/kodea@hubspot.com/profile?hapikey=APIKEYHERE&property=email",
-	  success: function(response){
-	  	console.log(response);
-	  },
-	});
-});
+// $("#teeTime").submit(function(event) {
+// 	event.preventDefault();
+// });
