@@ -29,9 +29,10 @@ router.get('/', function(req, res){
 
             // Data reception is done, do whatever with it!
             var parsed = JSON.parse(body);
-            callback({
-                email: parsed.email,
-            });
+            console.log(parsed);
+            // callback({
+            //     email: parsed.email,
+            // });
         });
     });
 
