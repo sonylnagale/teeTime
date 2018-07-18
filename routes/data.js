@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var http = require('http');
+var https = require('https');
 /* GET home page. */
 
 router.get('/', function(req, res){
@@ -18,7 +18,7 @@ router.get('/', function(req, res){
 	// 		console.log(response);
 	// 	});
 
-	return http.get('https://api.hubapi.com/contacts/v1/contact/email/kodea@hubspot.com/profile?hapikey=' + process.env.apikey +'&property=email', function(response) {
+	return https.get('https://api.hubapi.com/contacts/v1/contact/email/kodea@hubspot.com/profile?hapikey=' + process.env.apikey +'&property=email', function(response) {
         // Continuously update stream with data
         
        var body = '';
