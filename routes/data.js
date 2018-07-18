@@ -32,7 +32,7 @@ router.get('/', function(req, res){
             var parsed = JSON.parse(body);
             var person = parsed["canonical-vid"];
             var dealURL = 'https://api.hubapi.com/deals/v1/deal/associated/contact/' + person +'/paged?hapikey=' + process.env.apikey +'&includeAssociations=true&limit=10&properties=dealname&properties=first_name'
-            https.get(url, function(response) {
+            https.get(dealURL, function(response) {
 				console.log(response);
 			});
             // callback({
