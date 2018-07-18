@@ -18,9 +18,8 @@ router.get('/', function(req, res){
 	// 		console.log(response);
 	// 	});
 	var url = 'https://api.hubapi.com/contacts/v1/contact/email/kodea@hubspot.com/profile?hapikey=' + process.env.apikey +'&property=email&propertyMode=value_only';
-	console.log(url);
 
-	return https.get(url, function(response) {
+	https.get(url, function(response) {
         // Continuously update stream with data
         
        var body = '';
@@ -31,7 +30,10 @@ router.get('/', function(req, res){
 
             // Data reception is done, do whatever with it!
             var parsed = JSON.parse(body);
-            console.log(parsed["canonical-vid"]);
+            var person = parsed["canonical-vid"];
+            var dealURL = 'https://api.hubapi.com/deals/v1/deal/associated/contact/' + person +'/paged?hapikey=' + process.env.apikey +'&includeAssociations=true&limit=10&properties=dealname&properties=first_name'
+            https.get(url, function(response) {
+			console.log(response);
             // callback({
             //     email: parsed.email,
             // });
