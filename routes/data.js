@@ -34,7 +34,7 @@ router.get('/', function(req, res){
             var dealURL = 'https://api.hubapi.com/deals/v1/deal/associated/contact/' + person +'/paged?hapikey=' + process.env.apikey +'&includeAssociations=true&limit=10&properties=dealname&properties=first_name'
             https.get(url, function(response) {
 				console.log(response);
-			};
+			});
             // callback({
             //     email: parsed.email,
             // });
