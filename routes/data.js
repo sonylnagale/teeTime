@@ -38,7 +38,11 @@ router.get('/', function(req, res){
             		body += d;
         		});
         		response.on('end', function() {
-					res.send(body.properties.first_name);
+        			body.forEach(function(deal){
+        				res.send(deal);
+
+        			});
+					// res.send(body.properties.first_name);
 				});
             // callback({
             //     email: parsed.email,
