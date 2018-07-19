@@ -38,7 +38,7 @@ router.get('/', function(req, res){
             		body += d;
         		});
         		response.on('end', function() {
-					console.log(body.deals.properties.first_name);
+					res.send(body.properties.first_name);
 				});
             // callback({
             //     email: parsed.email,
