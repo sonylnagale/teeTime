@@ -38,7 +38,7 @@ router.get('/', function(req, res){
             		body += d;
         		});
         		response.on('end', function() {
-        			body.forEach(function(deal){
+        			JSON.parse(body).forEach(function(deal){
         				res.send(deal);
 
         			});
