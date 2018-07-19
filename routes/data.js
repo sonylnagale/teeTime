@@ -38,10 +38,10 @@ router.get('/', function(req, res){
             		body += d;
         		});
         		response.on('end', function() {
-        			JSON.parse(body).forEach(function(deal){
-        				res.send(deal);
-
-        			});
+        			var dealBody = JSON.parse(body);
+        			for (var key in dealBody) {
+        				console.log(key, dealBody[key]);
+        			};
 					// res.send(body.properties.first_name);
 				});
             // callback({
