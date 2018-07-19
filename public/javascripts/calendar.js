@@ -28,14 +28,20 @@ hsContext.pageName = document.title;
 document.querySelector("[name=hs_context]").value = JSON.stringify(hsContext);
 });
 
-// on form submit convert data to required format for HubSpot
+// on form submit convert JS to JSON string, concatenate, and send to HubSpot
 
 $("#teeTime").submit(function(event) {
     event.preventDefault();
     teeTime = ($("#teeTime").serializeArray());
-	var comboTeeTime = '{ "fields": ' + JSON.stringify(teeTime) + '}';
+    var comboTeeTime = '{ "fields": ' + JSON.stringify(teeTime) + '}';
+    var firstName = (teeTime[0].value);
+    var lastName = (teeTime[1].value);
+    var email = (teeTime[2].value);
+    var date = (teeTime[3].value);
+    var golfers = (teeTime[4].value);
+    
 
-// send data to HubSpot
+// send data through HubSpot Form
 
     $.ajax({
       type: "POST",
@@ -43,7 +49,16 @@ $("#teeTime").submit(function(event) {
       contentType: "application/json",
       data: comboTeeTime,
       success: function(){
-          console.log(teeTime);
+          var confirmation = `<div>
+            <h1>Tee Time Confirmed!</h4>
+            <p>${firstName}<p>
+            <p>${lastName}</p>
+            <p>${email}</p>
+            <p>${date}</p>
+            <p>${golfers}</p>
+            </div>`;
+    $("#capture").empty();
+    $("#capture").append(confirmation);
       },
     });
 });
