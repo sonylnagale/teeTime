@@ -39,7 +39,7 @@ router.get('/', function(req, res){
         		});
         		response.on('end', function() {
         			var dealBody = JSON.parse(body);
-        			for (var key in dealBody) {
+        			for (key of Object.keys(dealBody)) {
         				console.log(key, dealBody[key]);
         			};
 					// res.send(body.properties.first_name);
